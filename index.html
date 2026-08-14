@@ -286,19 +286,13 @@ async function diceButton() {
     const BASE = "https://countapi.mileshilliard.com/api/v1";
     const KEY = "jondo3d-xyz";
 
-    try {
-        const incResponse = await fetch(`${BASE}/hit/${KEY}`);
-        const incData = await incResponse.json();
-        console.log("Hit:", incData);
-
-        const getResponse = await fetch(`${BASE}/get/${KEY}`);
-        const getData = await getResponse.json();
-        console.log("Get:", getData);
-
-    } catch (error) {
-        console.error("An error occurred:", error);
-    }
+    // This creates an invisible image in the background to trigger the hit count
+    const img = new Image();
+    img.src = `${BASE}/hit/${KEY}?t=${Date.now()}`; 
+    
+    console.log("Hit counted via image request.");
 }
+
 
         function loadVid() {
         const iframe = document.getElementById('randomVid');
