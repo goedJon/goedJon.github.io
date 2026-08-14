@@ -1,5 +1,5 @@
 body {
-    cursor: url('/files/cursor.cur'), auto;
+    cursor: url('files/cursor.cur'), default;
 }
 
 a {

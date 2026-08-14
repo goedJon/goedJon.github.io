@@ -258,38 +258,45 @@
 
     <script>
         const vids = [
-"https://www.youtube.com/embed/nXY28Jwh-oA",
-"https://www.youtube.com/embed/0RuUSv6BGSw",
-"https://www.youtube.com/embed/5Bns-7WEagE",
-"https://www.youtube.com/embed/waUY-G896Tw",
-"https://www.youtube.com/embed/4A-m9fIw9tc",
-"https://www.youtube.com/embed/YBzmxSJgrJ8",
-"https://www.youtube.com/embed/Agj944tcTIM",
-"https://www.youtube.com/embed/awsQjo0IARU",
-"https://www.youtube.com/embed/3mADlNSwCO4",
-"https://www.youtube.com/embed/BHe7EL37_Fs",
-"https://www.youtube.com/embed/9RrkgIC78Pg",
-"https://www.youtube.com/embed/wLKyYP9DO-k",
-"https://www.youtube.com/embed/kgBOmRv8yfI",
-"https://www.youtube.com/embed/E7oB8l_GeH8",
-"https://www.youtube.com/embed/Vp5LV_1pnRU",
-"https://www.youtube.com/embed/dzoLVV7kbEk",
-"https://www.youtube.com/embed/qG5o-y_pv68",
-"https://www.youtube.com/embed/AcHAmxXAQDo",
-"https://www.youtube.com/embed/S-C8VWb0iMY",
-"https://www.youtube.com/embed/LPyxP6upHlA"
+        "https://www.youtube.com/embed/nXY28Jwh-oA",
+        "https://www.youtube.com/embed/0RuUSv6BGSw",
+        "https://www.youtube.com/embed/5Bns-7WEagE",
+        "https://www.youtube.com/embed/waUY-G896Tw",
+        "https://www.youtube.com/embed/4A-m9fIw9tc",
+        "https://www.youtube.com/embed/YBzmxSJgrJ8",
+        "https://www.youtube.com/embed/Agj944tcTIM",
+        "https://www.youtube.com/embed/awsQjo0IARU",
+        "https://www.youtube.com/embed/3mADlNSwCO4",
+        "https://www.youtube.com/embed/BHe7EL37_Fs",
+        "https://www.youtube.com/embed/9RrkgIC78Pg",
+        "https://www.youtube.com/embed/wLKyYP9DO-k",
+        "https://www.youtube.com/embed/kgBOmRv8yfI",
+        "https://www.youtube.com/embed/E7oB8l_GeH8",
+        "https://www.youtube.com/embed/Vp5LV_1pnRU",
+        "https://www.youtube.com/embed/dzoLVV7kbEk",
+        "https://www.youtube.com/embed/qG5o-y_pv68",
+        "https://www.youtube.com/embed/AcHAmxXAQDo",
+        "https://www.youtube.com/embed/S-C8VWb0iMY",
+        "https://www.youtube.com/embed/LPyxP6upHlA"
         ];
-        
+
         async function diceButton() {
-        
-         
+
+
         try {
-        const response = await fetch('https://api.countapi.xyz/hit/jondo3d-xyz/clicks');
-        const data = await response.json();
-        document.getElementById('clickCount').innerText = data.value;
-        console.log(data.value);
-        } catch (error) {
-        console.log("Error updating global count:", error);
+
+        const BASE = "https://countapi.mileshilliard.com/api/v1";
+        const KEY = "jondo3d-xyz";
+
+        // Increment
+        fetch(`${BASE}/hit/${KEY}`)
+        .then(res => res.json())
+        .then(data => console.log("Hit:", data));
+
+        // Get current value
+        fetch(`${BASE}/get/${KEY}`)
+        .then(res => res.json())
+        .then(data => console.log("Get:", data));
         }
         
     
