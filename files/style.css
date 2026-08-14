@@ -1,5 +1,5 @@
 body {
-    cursor: url('files/cursor.cur'), default;
+    cursor: url('skeletom.cur'), auto;
 }
 
 a {
@@ -15,11 +15,11 @@ p {
     margin: 10px;
 }
 
-.bandcamp{
- width: 100%;
-  aspect-ratio: 70 / 111;
- height: auto;
- display: block;
+.bandcamp {
+    width: 100%;
+    aspect-ratio: 70 / 111;
+    height: auto;
+    display: block;
 }
 
 b {
@@ -96,7 +96,7 @@ body .img a {
 }
 
 iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
 }
