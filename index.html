@@ -53,9 +53,9 @@
             <div class="content">
                 <h2>my games</h2>
                 <div class="img">
-                <a href="https://thebigsleep.itch.io/moonrider" target="_blank">
-                    <img src="files/moonrider.png" alt="MOONRIDER">
-                </a>
+                    <a href="https://thebigsleep.itch.io/moonrider" target="_blank">
+                        <img src="files/moonrider.png" alt="MOONRIDER">
+                    </a>
                 </div>
             </div>
         </div>
@@ -70,13 +70,13 @@
                         <img src="files/GXR.jpg" alt="GRIP XR">
                     </a>
                 </div>
-<p></p>
+                <p></p>
                 <div class="img">
                     <a href="https://store.steampowered.com/app/2078450/Warhammer_40000_Speed_Freeks/" target="_blank">
                         <img src="files/SF.jpg" alt="Speed Freeks">
                     </a>
                 </div>
-<p></p>
+                <p></p>
                 <div class="img">
                     <a href="https://store.steampowered.com/app/396900/GRIP_Combat_Racing/" target="_blank">
                         <img src="files/GRIP.jpg" alt="GRIP">
@@ -124,7 +124,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="content-wrapper">
         <div class="panel">
             <div class="content">
@@ -140,7 +140,7 @@
             <div class="content">
                 <h2 style="margin-bottom: 0;">screenshots from 2b2t</h2>
                 <p style="margin-top: 0;"><i>minecraft's oldest anarchy server</i></p>
-                
+
                 <p></p>
                 <a href="files/mc/where am i.png" class="img" target="_blank">
                     <img src="files/mc/where am i.png" alt="where am i.png">
@@ -236,7 +236,7 @@
                     <img src="files/mc/the ground is too far away so I can see the night sun.png" alt="the ground is too far away so I can see the night sun.png">
                     <p>the ground is so far away that i can see the night sun.png</p>
                 </a>
-                
+
                 <p></p>
                 <a href="gallery.html" style="color: white">see all</a>
 
@@ -280,28 +280,25 @@
         "https://www.youtube.com/embed/LPyxP6upHlA"
         ];
 
-        async function diceButton() {
+async function diceButton() {
+    loadVid();
 
+    const BASE = "https://countapi.mileshilliard.com/api/v1";
+    const KEY = "jondo3d-xyz";
 
-        try {
+    try {
+        const incResponse = await fetch(`${BASE}/hit/${KEY}`);
+        const incData = await incResponse.json();
+        console.log("Hit:", incData);
 
-        const BASE = "https://countapi.mileshilliard.com/api/v1";
-        const KEY = "jondo3d-xyz";
+        const getResponse = await fetch(`${BASE}/get/${KEY}`);
+        const getData = await getResponse.json();
+        console.log("Get:", getData);
 
-        // Increment
-        fetch(`${BASE}/hit/${KEY}`)
-        .then(res => res.json())
-        .then(data => console.log("Hit:", data));
-
-        // Get current value
-        fetch(`${BASE}/get/${KEY}`)
-        .then(res => res.json())
-        .then(data => console.log("Get:", data));
-        }
-        
-    
-        loadVid(); 
-        }
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }
+}
 
         function loadVid() {
         const iframe = document.getElementById('randomVid');
@@ -314,20 +311,20 @@
         document.addEventListener("DOMContentLoaded", loadVid);
 
     </script>
-    
-<script>
-function openImages() {
-    const images = [
+
+    <script>
+        function openImages() {
+        const images = [
         'files/mc/meatbed.png',
         'files/mc/doomed voyage.png',
         'files/mc/cake.png'
-    ];
-    
-    images.forEach(url => {
+        ];
+
+        images.forEach(url => {
         window.open(url, '_blank');
-    });
-}
-</script>
+        });
+        }
+    </script>
 
 
 
