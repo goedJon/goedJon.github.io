@@ -1,0 +1,103 @@
+body {
+
+}
+
+
+    a {
+        display: block;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+p {
+    margin: 10px;
+}
+
+.bandcamp{
+ width: 100%;
+  aspect-ratio: 70 / 111;
+ height: auto;
+ display: block;
+}
+
+b {
+    margin: 10px;
+}
+
+h2 {
+    margin: 10px;
+}
+
+h2 {
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body .img a {
+    color: white !important;
+    text-align: center;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-image: url(2222.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    z-index: 1;
+}
+
+.panel {
+    position: relative;
+    width: 93%;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    z-index: 2;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    color: white;
+    padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
