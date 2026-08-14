@@ -282,23 +282,6 @@
 
 function diceButton() {
     loadVid();
-
-    const BASE = "https://mileshilliard.com";
-    const KEY = "jondo3d-xyz";
-
-    const img = new Image();
-    img.src = `${BASE}/hit/${KEY}?t=${Date.now()}`; 
-
-    const script = document.createElement('script');
-    script.src = `${BASE}/get/${KEY}?callback=displayCount&t=${Date.now()}`;
-    
-    script.onload = () => script.remove(); 
-    document.body.appendChild(script);
-}
-
-function displayCount(data) {
-    document.getElementById("hit-count").innerText = data.value; 
-    console.log("Current Count:", data.value);
 }
 
 
