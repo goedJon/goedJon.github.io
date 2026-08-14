@@ -1,11 +1,10 @@
 body {
-
+    cursor: url('/files/cursor.cur'), auto;
 }
 
-
-    a {
-        display: block;
-    }
+a {
+    display: block;
+}
     
     img {
         width: 100%;
