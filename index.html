@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jondo3d</title>
     <link rel="stylesheet" href="files/style.css">
-    <link rel="preload" as="image" href="test.png">
+    <link rel="preload" as="image" href="22222.jpg">
 
 
 
@@ -33,7 +33,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(files/test.png);
+            background-image: url(files/22222.jpg);
             background-repeat: no-repeat;
             background-position: top;
             background-size: cover;
@@ -357,16 +357,28 @@
         "https://www.youtube.com/embed/8DlnQizEexM"
         ];
 
+        
+        const vidsOpener = [
+        "https://www.youtube.com/embed/nXY28Jwh-oA",
+        "https://www.youtube.com/embed/0RuUSv6BGSw"
+                ];
+
         function diceButton() {
-        loadVid();
+        loadVidAny();
         }
 
-
-
-        function loadVid() {
+        function loadVidAny() {
         const iframe = document.getElementById('randomVid');
 
         const randomVidUrl = vids[Math.floor(Math.random() * vids.length)];
+
+        iframe.src = randomVidUrl;
+        }
+
+        function loadVidOpener() {
+        const iframe = document.getElementById('randomVid');
+
+        const randomVidUrl = vids[Math.floor(Math.random() * vidsOpener.length)];
 
         iframe.src = randomVidUrl;
         }
