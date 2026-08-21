@@ -383,7 +383,7 @@
         function loadVidOpener() {
         const iframe = document.getElementById('randomVid');
 
-        const randomVidUrl = vids[Math.floor(Math.random() * vidsOpener.length)];
+        const randomVidUrl = vidsOpener[Math.floor(Math.random() * vidsOpener.length)];
 
         iframe.src = randomVidUrl;
         }
